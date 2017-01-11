@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/essence_vp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="#00f"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_alert_lookbtn_normal"
+        android:layout_height="100dp">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_marginTop="30dp"
+                android:id="@+id/essence_toolbar"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="parallax"
+                android:layout_height="match_parent"
+                >
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/essence_tb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    app:tabIndicatorColor="#fff"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="#aaa"
+                    app:tabTextColor="#aaa">
+
+                </android.support.design.widget.TabLayout>
+            </android.support.v7.widget.Toolbar>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/essence_bt_top"
+                    android:textSize="20sp"
+                    android:text="百思不得姐"
+                    android:textColor="#fff"
+                    android:background="@null"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/rotate_icon"
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/essence_bt_top"
+                    android:layout_centerVertical="true"
+                    android:layout_height="20dp" />
+                <Button
+                    android:id="@+id/essence_bt_tothrough"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/selector_bt_refresh"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>
